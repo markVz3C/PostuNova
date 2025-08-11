@@ -1,4 +1,4 @@
-# SmartBlink
+# PostuNova
 Detector de Fatiga Visual para Estudiantes
 
 SmartBlink 
