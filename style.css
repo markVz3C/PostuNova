@@ -432,3 +432,53 @@ body {
     stroke: currentColor;
     fill: currentColor;
 }
+
+
+#desarrolladores .team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+#desarrolladores .team-member {
+    text-align: center;
+    max-width: 200px;
+}
+
+#desarrolladores .image-placeholder {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    position: relative;
+}
+
+#desarrolladores .image-placeholder img.fotos-desarrrolador {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta y ajusta sin deformar */
+    display: block;
+}
+
+#desarrolladores .image-placeholder i {
+    position: absolute;
+    font-size: 50px;
+    color: #aaa;
+}
+
+#desarrolladores .image-placeholder p {
+    position: absolute;
+    bottom: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 12px;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
