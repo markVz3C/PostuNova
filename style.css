@@ -482,3 +482,13 @@ body {
     padding: 2px 5px;
     border-radius: 5px;
 }
+
+.imagen-equipo {
+    width: 100%;
+    height: 400px; 
+    background-image: url("grupo.jpg");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
