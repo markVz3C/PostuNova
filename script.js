@@ -194,3 +194,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// script.js
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
+
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');      // Mostrar/Ocultar menú
+    hamburger.classList.toggle('active');   // Animación de la hamburguesa
+});
+
+// Cerrar el menú al hacer clic en un enlace
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+    });
+});

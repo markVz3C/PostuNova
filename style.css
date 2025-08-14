@@ -66,9 +66,16 @@ body {
 }
 
 .nav-menu {
+    overflow-y: auto;   /* Permite scroll si hay muchos links */
+    max-height: calc(100vh - 70px); /* No cubre toda la pantalla */
     display: flex;
     list-style: none;
     gap: 30px;
+}
+
+/* Espaciado entre links móvil */
+.nav-menu li {
+    margin: 15px 0;
 }
 
 .nav-link {
@@ -632,3 +639,5 @@ body {
     stroke: currentColor;
     fill: currentColor;
 }
+
+
