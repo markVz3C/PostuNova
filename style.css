@@ -492,3 +492,24 @@ body {
     background-repeat: no-repeat;
     border-radius: 10px;
 }
+
+/* Imágenes circulares en tarjetas de mejoras */
+#mejoras .feature-card .image-placeholder {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mejoras .feature-card .image-placeholder img.fotos-mejora {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta sin deformar */
+    display: block;
+}
+
