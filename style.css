@@ -85,6 +85,37 @@ body {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Hamburger Menu Button */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+    background: none;
+    border: none;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -374,66 +405,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .navbar {
-        padding: 15px 20px;
-    }
-
-    .nav-menu {
-        gap: 15px;
-    }
-
-    .nav-link {
-        font-size: 0.9rem;
-        padding: 6px 12px;
-    }
-
-    .hero-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 0 20px;
-        text-align: center;
-    }
-
-    .hero-text h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-text .subtitle {
-        font-size: 1.1rem;
-    }
-
-    .section {
-        padding: 60px 20px;
-    }
-
-    .section h2 {
-        font-size: 2rem;
-    }
-
-    .features-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .team-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-}
-
-/* Font Icons */
-.icon {
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    stroke-width: 0;
-    stroke: currentColor;
-    fill: currentColor;
-}
-
-
+/* Desarrolladores y equipos */
 #desarrolladores .team-grid {
     display: flex;
     justify-content: center;
@@ -463,7 +435,7 @@ body {
 #desarrolladores .image-placeholder img.fotos-desarrrolador {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Recorta y ajusta sin deformar */
+    object-fit: cover;
     display: block;
 }
 
@@ -509,12 +481,11 @@ body {
 #mejoras .feature-card .image-placeholder img.fotos-mejora {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajusta sin deformar */
+    object-fit: cover;
     display: block;
 }
 
-
-/* ===== Footer ===== */
+/* Footer */
 .footer {
     background-color: #222;
     color: #fff;
@@ -574,3 +545,90 @@ body {
     color: #aaa;
 }
 
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: rgba(102, 126, 234, 0.95);
+        backdrop-filter: blur(10px);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 20px 0;
+        gap: 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+
+    .nav-link {
+        padding: 15px 20px;
+        display: block;
+        width: 100%;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .section {
+        padding: 60px 20px;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .navbar.transparent,
+    .navbar.solid {
+        padding: 15px 20px;
+    }
+}
+
+/* Font Icons */
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}
