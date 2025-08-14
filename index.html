@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Screen Balance</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <!-- Navigation -->
-    <nav class="navbar transparent" id="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">Screen Balance</a>
-            <ul class="nav-menu">
-                <li><a href="#inicio" class="nav-link active">Página De Inicio</a></li>
-                <li><a href="#login" class="nav-link">Inicio De Sesión</a></li>
-                <li><a href="#nosotros" class="nav-link">Sobre Nosotros</a></li>
-                <li><a href="#acerca" class="nav-link">ACERCA DE</a></li>
-                <li><a href="#uso" class="nav-link">USO</a></li>
-                <li><a href="#mejoras" class="nav-link">MEJORAS</a></li>
-            </ul>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <h1 class="logo">Screen Balance</h1>
+            
+            <!-- Botón hamburguesa -->
+            <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+
+            <!-- Menú -->
+            <nav class="nav-links">
+                <a href="#inicio">Página de Inicio</a>
+                <a href="#login">Inicio de Sesión</a>
+                <a href="#nosotros">Sobre Nosotros</a>
+                <a href="#acerca">Acerca de</a>
+                <a href="#uso">Uso</a>
+                <a href="#mejoras">Mejoras</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
     <section id="inicio" class="hero">
-        <!-- Placeholder para imagen de fondo del hero -->
-        <img src="" alt="Hero Background" class="hero-background-image" style="display: none;">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="hero-text">
@@ -82,15 +84,15 @@
             <h2>Sobre Nosotros</h2>
             <p>Somos un equipo comprometido con el desarrollo de soluciones tecnológicas que promuevan un uso saludable
                 de las pantallas digitales entre los estudiantes.</p>
-        <div class="imagen-equipo"></div>
-            <!-- Placeholder para imagen del equipo -->
-            </div>
-    <section id="desarrolladores">
+            <div class="imagen-equipo"></div>
+        </div>
+
+        <section id="desarrolladores">
             <div class="team-grid">
                 <div class="team-member">
                     <div class="image-placeholder">
                         <i class="fas fa-user"></i>
-                        <img class="fotos-desarrrolador" src="ian.jpg">
+                        <img class="fotos-desarrrolador" src="ian.jpg" alt="Desarrollador 1">
                     </div>
                     <h3>Desarrollador 1</h3>
                     <p>Frontend Developer</p>
@@ -98,7 +100,7 @@
                 <div class="team-member">
                     <div class="image-placeholder">
                         <i class="fas fa-user"></i>
-                        <img class="fotos-desarrrolador" src="ricardo.jpg">
+                        <img class="fotos-desarrrolador" src="ricardo.jpg" alt="Desarrollador 2">
                     </div>
                     <h3>Desarrollador 2</h3>
                     <p>Backend Developer</p>
@@ -106,23 +108,21 @@
                 <div class="team-member">
                     <div class="image-placeholder">
                         <i class="fas fa-user"></i>
-                        <img class="fotos-desarrrolador" src="benja.jpg">
+                        <img class="fotos-desarrrolador" src="benja.jpg" alt="Desarrollador 3">
                     </div>
                     <h3>Desarrollador 3</h3>
                     <p>UI/UX Designer</p>
                 </div>
             </div>
-        </div>
+        </section>
     </section>
-    </section>
+
     <!-- About Project Section -->
     <section id="acerca" class="section">
         <h2>Acerca del Proyecto</h2>
         <p>Screen Balance es una aplicación innovadora diseñada para ayudar a estudiantes y educadores a mantener un
-            equilibrio saludable en el uso de dispositivos digitales, promoviendo hábitos responsables y mejorando el
-            bienestar general.</p>
+            equilibrio saludable en el uso de dispositivos digitales.</p>
 
-        <!-- Placeholder para imagen del proyecto -->
         <div class="image-placeholder large">
             <i class="fas fa-laptop"></i>
             <p>Captura de pantalla de la aplicación</p>
@@ -155,7 +155,6 @@
             <p>Screen Balance ofrece múltiples funcionalidades para diferentes tipos de usuarios, desde estudiantes
                 hasta educadores y padres de familia.</p>
 
-            <!-- Placeholder para imagen de uso -->
             <div class="image-placeholder">
                 <i class="fas fa-mobile-alt"></i>
                 <p>Interfaz de la aplicación en uso</p>
@@ -182,18 +181,10 @@
         </div>
     </section>
 
-<!-- Improvements Section -->
+    <!-- Improvements Section -->
     <section id="mejoras" class="section">
         <h2>Mejoras para el Usuario</h2>
-        <p>Nuestro proyecto implementa mejoras continuas basadas en investigación científica y feedback de usuarios para
-            maximizar los beneficios del bienestar digital.</p>
-
-        <!-- Placeholder para imagen de mejoras -->
-        <div class="image-placeholder">
-            <i class="fas fa-chart-line"></i>
-            <p>Gráficos y estadísticas de mejoras</p>
-            <small>(Insertar imagen aquí)</small>
-        </div>
+        <p>Nuestro proyecto implementa mejoras continuas basadas en investigación científica y feedback de usuarios.</p>
 
         <div class="features-grid">
             <div class="feature-card">
@@ -224,54 +215,18 @@
                 <h3>Análisis Predictivo</h3>
                 <p>IA que predice patrones de uso problemáticos y sugiere intervenciones preventivas.</p>
             </div>
-            <div class="feature-card">
-                <div class="image-placeholder">
-                    <img class="fotos-mejora" src="tranquilo.jfif" alt="Bienestar Emocional">
-                </div>
-                <h3>Bienestar Emocional</h3>
-                <p>Herramientas de mindfulness, meditación guiada y gestión del estrés digital.</p>
-            </div>
-            <div class="feature-card">
-                <div class="image-placeholder">
-                    <img class="fotos-mejora" src="trabajando.jpg" alt="Rendimiento Académico">
-                </div>
-                <h3>Rendimiento Académico</h3>
-                <p>Optimización del tiempo de estudio digital y técnicas de concentración mejoradas.</p>
-            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="footer-container">
-            <div class="footer-about">
-                <h3>Screen Balance</h3>
-                <p>Plataforma dedicada a mejorar el bienestar digital de los usuarios mediante tecnología innovadora y análisis personalizado.</p>
-            </div>
-
-            <div class="footer-links">
-                <h4>Enlaces rápidos</h4>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#mejoras">Mejoras</a></li>
-                    <li><a href="#equipo">Equipo</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-contact">
-                <h4>Contacto</h4>
-                <p>Email: contacto@screenbalance.com</p>
-                <p>Teléfono: +56 9 1234 5678</p>
-                <p>Dirección: Av. Innovación 123, Santiago, Chile</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Screen Balance - Todos los derechos reservados</p>
+            <p>&copy; 2025 Screen Balance | Todos los derechos reservados</p>
+            <p>Contacto: contacto@screenbalance.com | Tel: +56 9 1234 5678</p>
+            <p>Dirección: Calle Falsa 123, Santiago, Chile</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-
 </html>
